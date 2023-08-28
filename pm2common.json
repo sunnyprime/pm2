@@ -1,0 +1,40 @@
+{
+    "apps": [
+        {
+            "name": "forkedserver",
+            "cwd":"./p2",
+            "script": "./app.js",
+            "watch": true,
+            "ignore_watch": ["node_modules", "public"],
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "DB_NAME": "P2_IMPROVED"
+            }
+        },
+        {
+            "name": "codeimprove",
+            "cwd":"./p3",
+            "script": "./app.js",            
+            "watch": true,
+            "ignore_watch": ["node_modules", "public"],
+            "instances": 1,
+            "exec_mode": "cluster",
+            "env": {
+                "DB_NAME": "P2_IMPROVED"
+            }
+        },
+        {
+            "name": "codeimprove",
+            "cwd":"./p1",
+            "script": "./app.js",            
+            "watch": true,
+            "ignore_watch": ["node_modules", "public"],
+            "instances": 1,
+            "exec_mode": "cluster",
+            "env": {
+                "DB_NAME": "P2_IMPROVED"
+            }
+        }
+    ]
+}
